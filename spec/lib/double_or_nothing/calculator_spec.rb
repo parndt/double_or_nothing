@@ -4,17 +4,18 @@ require "double_or_nothing"
 
 RSpec.describe DoubleOrNothing do
   context DoubleOrNothing::Calculator do
-    context "as documented in the README"
-    let(:alice) { double(birthday: Date.parse("2000-01-01"))  }
-    let(:bob)   { double(birthday: Date.parse("1985-01-01"))  }
-    subject     { DoubleOrNothing::Calculator.new(alice, bob) }
+    context "as documented in the README" do
+      let(:alice) { double(birthday: Date.parse("2000-01-01"))  }
+      let(:bob)   { double(birthday: Date.parse("1985-01-01"))  }
+      subject     { DoubleOrNothing::Calculator.new(alice, bob) }
 
-    it "calculates the correct date" do
-      expect(subject.call).to eq(Date.parse("2014-12-31"))
-    end
+      it "calculates the correct date" do
+        expect(subject.call).to eq(Date.parse("2014-12-31"))
+      end
 
-    it "shows difference" do
-      expect(subject.difference).to eq(Rational(5478, 1))
+      it "shows difference" do
+        expect(subject.difference).to eq(Rational(5478, 1))
+      end
     end
   end
 
