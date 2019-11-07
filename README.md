@@ -33,6 +33,11 @@ DoubleOrNothing::Calculator.new(alice, bob).difference
 #=> (5478/1)
 ```
 
+## Web Usage
+
+An example website can be found at https://github.com/parndt/double_or_nothing-web.
+This is currently running at https://double-or-nothing.herokuapp.com - enjoy!
+
 ## Contributing
 
 1. Fork it ( https://github.com/parndt/double_or_nothing/fork )
